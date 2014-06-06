@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="color_barrechargement" sid="469982398732647" static="0" type="number">0</variable>
+        <event-block sid="9574828059470066">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2637557499149236" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9360889153795479" type="System">
+                    <param id="0" name="Variable">color_barrechargement</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">360</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-6" name="Set height" sid="8007585525319814" type="barre_chargement">
+                    <param id="0" name="Height">barre_chargement.Height-1</param>
+                </action>
+                <action id="-2" name="Set Y" sid="3844786410145897" type="barre_chargement">
+                    <param id="0" name="Y">barre_chargement.Y+0.5</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="5290243549108321" type="barre_chargement">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">1</param>
+                    <param id="2" name="Value">255-color_barrechargement</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="4227648120579946" type="barre_chargement">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">color_barrechargement</param>
+                </action>
+                <action id="-10" name="Add to" sid="4649891141179993" type="System">
+                    <param id="0" name="Variable">color_barrechargement</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
